@@ -1,20 +1,48 @@
-<!-- Elementor HTML Widget Snippets
-Use only for small custom fragments. Prefer native Elementor widgets for layout.
--->
+<!-- =====================================================
+   LUONG HUYNH PORTFOLIO — ELEMENTOR HTML WIDGET SNIPPETS
+   Use these in Elementor > HTML Widget for sections that
+   are difficult to build with native Elementor widgets.
+   ===================================================== -->
 
-<!-- Hero title with gradient span -->
-Cinematic <span class="lh-text-gradient">digital art</span> for brands, products and stories.
 
-<!-- Chip row -->
-<div class="lh-meta-row">
-  <span class="lh-chip lh-chip-strong">Available for Work</span>
-  <span class="lh-chip">3D</span>
-  <span class="lh-chip">AI Generated</span>
-  <span class="lh-chip">VFX</span>
-</div>
+<!-- ── SNIPPET 1: NAV CTA WITH CYAN DOT ───────────────
+   Use in the Header template, HTML Widget.
+   Replaces the "Available for Work" button.             -->
+<a class="lh-nav-cta" href="#contact">Available for Work</a>
 
-<!-- Static portfolio filter buttons, only if not using a filter plugin -->
-<div class="lh-filter-bar">
+
+<!-- ── SNIPPET 2: HERO EYEBROW ────────────────────────
+   Paste above the H1 in the Hero section HTML Widget.  -->
+<span class="lh-eyebrow">Ho Chi Minh City · 2026</span>
+
+
+<!-- ── SNIPPET 3: WORK CARD (single card template) ────
+   Duplicate for each project. Replace src, alt, href,
+   data-categories, title, tags and description.
+   Used when native Elementor widgets lack data-* attrs.  -->
+<article class="lh-work-card" data-categories="cgi branding">
+  <a href="#" aria-label="Open BT Studio – CGI Beverage Demo case study">
+    <div class="lh-work-media">
+      <img src="/wp-content/uploads/project-thumb.jpg" alt="BT Studio – CGI Beverage Demo">
+    </div>
+    <div class="lh-work-info">
+      <div class="lh-tag-row">
+        <span class="lh-tag">CGI</span>
+        <span class="lh-tag">Branding</span>
+      </div>
+      <h3 class="lh-work-title">BT Studio – CGI Beverage Demo</h3>
+      <p>Product-led CGI beverage demo with polished advertising finish.</p>
+    </div>
+  </a>
+</article>
+
+
+<!-- ── SNIPPET 4: FULL WORK GRID (Portfolio page) ─────
+   Drop this entire block into one HTML Widget on the
+   Portfolio page. Update each card's data-categories,
+   image src, and copy. The JS filter reads data-filter
+   on buttons and data-categories on cards.             -->
+<div class="lh-filter-bar" aria-label="Portfolio filters">
   <button class="lh-filter-btn is-active" data-filter="all">All</button>
   <button class="lh-filter-btn" data-filter="3d">3D Model</button>
   <button class="lh-filter-btn" data-filter="ai">AI Generated</button>
@@ -27,9 +55,189 @@ Cinematic <span class="lh-text-gradient">digital art</span> for brands, products
   <button class="lh-filter-btn" data-filter="web">Web Design</button>
 </div>
 
-<!-- About detail list -->
+<div class="lh-work-grid">
+
+  <article class="lh-work-card" data-categories="tvc">
+    <a href="#" aria-label="Open TVC Ovaltine 2015 Adaptation">
+      <div class="lh-work-media"><img src="/wp-content/uploads/tvc-ovaltine.jpg" alt="TVC Ovaltine 2015 Adaptation"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">TVC</span></div>
+        <h3 class="lh-work-title">TVC Ovaltine 2015 Adaptation</h3>
+        <p>Campaign adaptation with cinematic product treatment.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="cgi feature">
+    <a href="#" aria-label="Open BT Studio – CGI Huda Football">
+      <div class="lh-work-media"><img src="/wp-content/uploads/bt-studio-huda.jpg" alt="BT Studio – CGI Huda Football"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">CGI</span><span class="lh-tag">Feature</span></div>
+        <h3 class="lh-work-title">BT Studio – CGI Huda Football</h3>
+        <p>CGI beer-football visual system for energetic campaign assets.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="ai branding">
+    <a href="#" aria-label="Open Stride Beyond">
+      <div class="lh-work-media"><img src="/wp-content/uploads/stride-beyond.jpg" alt="Stride Beyond"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">AI Generated</span><span class="lh-tag">Branding</span></div>
+        <h3 class="lh-work-title">Stride Beyond</h3>
+        <p>AI-led identity exploration for a futuristic visual language.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="3d ai">
+    <a href="#" aria-label="Open Cheers to Victory">
+      <div class="lh-work-media"><img src="/wp-content/uploads/cheers-to-victory.jpg" alt="Cheers to Victory"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">3D Model</span><span class="lh-tag">AI Generated</span></div>
+        <h3 class="lh-work-title">Cheers to Victory</h3>
+        <p>Victory-themed 3D/AI visual with energetic beer celebration mood.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="3d keyvisual">
+    <a href="#" aria-label="Open AFC Key Visual">
+      <div class="lh-work-media"><img src="/wp-content/uploads/afc-key-visual.jpg" alt="AFC Key Visual"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">3D Model</span><span class="lh-tag">Key Visuals</span></div>
+        <h3 class="lh-work-title">AFC Key Visual</h3>
+        <p>High-impact sports key visual direction and product composition.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="3d keyvisual">
+    <a href="#" aria-label="Open Twister Pack Visual">
+      <div class="lh-work-media"><img src="/wp-content/uploads/twister-pack-visual.jpg" alt="Twister Pack Visual"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">3D Model</span><span class="lh-tag">Key Visuals</span></div>
+        <h3 class="lh-work-title">Twister Pack Visual</h3>
+        <p>Pack-focused 3D visual built for retail and campaign usage.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="3d keyvisual">
+    <a href="#" aria-label="Open Halida Tet 2022 Key Visual">
+      <div class="lh-work-media"><img src="/wp-content/uploads/halida-tet-2022.jpg" alt="Halida Tet 2022 Key Visual"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">3D Model</span><span class="lh-tag">Key Visuals</span></div>
+        <h3 class="lh-work-title">Halida Tet 2022 Key Visual</h3>
+        <p>Seasonal Tet composition combining beer product and festive energy.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="3d keyvisual">
+    <a href="#" aria-label="Open Huda Beach Carnival 2023">
+      <div class="lh-work-media"><img src="/wp-content/uploads/huda-beach-carnival.jpg" alt="Huda Beach Carnival 2023"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">3D Model</span><span class="lh-tag">Key Visuals</span></div>
+        <h3 class="lh-work-title">Huda Beach Carnival 2023</h3>
+        <p>Event visual with beach, summer, and brand-world atmosphere.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="web">
+    <a href="#" aria-label="Open Circuit">
+      <div class="lh-work-media"><img src="/wp-content/uploads/circuit.jpg" alt="Circuit"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">Web Design</span></div>
+        <h3 class="lh-work-title">Circuit</h3>
+        <p>Visual interface direction for a modern digital product concept.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="web">
+    <a href="#" aria-label="Open Spectral">
+      <div class="lh-work-media"><img src="/wp-content/uploads/spectral.jpg" alt="Spectral"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">Web Design</span></div>
+        <h3 class="lh-work-title">Spectral</h3>
+        <p>Editorial web concept with atmospheric motion and dark UI styling.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="branding">
+    <a href="#" aria-label="Open Nexora">
+      <div class="lh-work-media"><img src="/wp-content/uploads/nexora.jpg" alt="Nexora"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">Branding</span></div>
+        <h3 class="lh-work-title">Nexora</h3>
+        <p>Brand system exploration with premium futuristic identity cues.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="film">
+    <a href="#" aria-label="Open Astralis">
+      <div class="lh-work-media"><img src="/wp-content/uploads/astralis.jpg" alt="Astralis"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">Film</span></div>
+        <h3 class="lh-work-title">Astralis</h3>
+        <p>Film-inspired visual direction with atmospheric narrative framing.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="lh-work-card" data-categories="branding cgi">
+    <a href="#" aria-label="Open BT Studio – CGI Beverage Demo">
+      <div class="lh-work-media"><img src="/wp-content/uploads/bt-studio-beverage.jpg" alt="BT Studio – CGI Beverage Demo"></div>
+      <div class="lh-work-info">
+        <div class="lh-tag-row"><span class="lh-tag">Branding</span><span class="lh-tag">CGI</span></div>
+        <h3 class="lh-work-title">BT Studio – CGI Beverage Demo</h3>
+        <p>Product-led CGI beverage demo with polished advertising finish.</p>
+      </div>
+    </a>
+  </article>
+
+</div>
+
+<!-- Filter JS — paste into Elementor > Custom Code > Body End,
+     or use Elementor HTML Widget at the bottom of the page.    -->
+<script>
+(function() {
+  var filterBtns = document.querySelectorAll('[data-filter]');
+  var cards = document.querySelectorAll('[data-categories]');
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filter = btn.dataset.filter;
+      filterBtns.forEach(function(b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      cards.forEach(function(card) {
+        var cats = card.dataset.categories.toLowerCase();
+        card.hidden = !(filter === 'all' || cats.includes(filter));
+      });
+    });
+  });
+})();
+</script>
+
+
+<!-- ── SNIPPET 5: ABOUT PORTRAIT CAPTION ──────────────
+   Use inside the About portrait panel HTML Widget.     -->
+<div class="lh-hero-card-caption">
+  <div class="lh-meta-row">
+    <span class="lh-chip lh-chip-strong">Digital Artist</span>
+    <span class="lh-chip">Ho Chi Minh City</span>
+  </div>
+</div>
+
+
+<!-- ── SNIPPET 6: ABOUT SPEC LIST ─────────────────────
+   Use inside the About rich-text column HTML Widget.  -->
 <ul class="lh-list">
   <li><strong>Focus</strong><span>3D product visuals, AI-generated art, CGI key visuals, campaign image systems and VFX finishing.</span></li>
   <li><strong>Clients</strong><span>Brands, agencies, production teams and campaign creators needing high-impact visuals.</span></li>
   <li><strong>Approach</strong><span>Blend art direction, generative workflows, compositing and production sensibility into finished assets.</span></li>
+  <li><strong>Output</strong><span>Key visuals, product renders, pitch frames, social campaign assets, launch imagery and moving-image look development.</span></li>
 </ul>
