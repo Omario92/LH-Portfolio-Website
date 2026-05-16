@@ -1,0 +1,10 @@
+{
+  "name": "luong-portfolio-claude-code-fullsite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio prototype for Luong Huynh, prepared for Claude Code review and Elementor rebuild.",
+  "scripts": {
+    "preview": "python -m http.server 5173",
+    "check:paths": "python scripts/check_paths.py"
+  }
+}
