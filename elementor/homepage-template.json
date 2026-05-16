@@ -1,0 +1,411 @@
+{
+  "version": "0.4",
+  "title": "Luong Huynh — Homepage",
+  "type": "page",
+  "content": [
+    {
+      "id": "2w6cswx6",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-hero",
+        "flex_direction": "column",
+        "content_width": "full",
+        "flex_justify_content": "flex-end",
+        "min_height": {
+          "unit": "vh",
+          "size": 92,
+          "sizes": {}
+        },
+        "background_background": "classic",
+        "background_color": "#070707"
+      },
+      "elements": [
+        {
+          "id": "wgulkjqd",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-hero-body lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "flex_align_items": "flex-start",
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "96",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "2nb44ikm",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p class=\"lh-eyebrow\">Ho Chi Minh City · 2026</p>"
+              },
+              "elements": []
+            },
+            {
+              "id": "hvmqne4r",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Cinematic digital art",
+                "header_size": "h1",
+                "css_classes": "lh-hero-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "jmgt2lhp",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Digital Artist crafting 3D visuals, AI-generated imagery and VFX for brands, campaigns and cinematic stories.</p>",
+                "css_classes": "lh-hero-copy"
+              },
+              "elements": []
+            },
+            {
+              "id": "ux60tv9l",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": {
+                  "unit": "px",
+                  "size": 14,
+                  "isLinked": true
+                },
+                "css_classes": "lh-hero-actions"
+              },
+              "elements": [
+                {
+                  "id": "lta7p2ra",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "View Portfolio",
+                    "link": {
+                      "url": "/portfolio/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "css_classes": "lh-button lh-button-primary"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "7pyrf1fs",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "About Luong",
+                    "link": {
+                      "url": "/about/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "css_classes": "lh-button"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5jwehehc",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-section",
+        "flex_direction": "column",
+        "content_width": "full"
+      },
+      "elements": [
+        {
+          "id": "rodprqf1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "rsm5g8pf",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "css_classes": "lh-section-head",
+                "flex_direction": "row",
+                "flex_align_items": "flex-end",
+                "gap": {
+                  "unit": "px",
+                  "size": 32,
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "0v0ass9x",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "column",
+                    "gap": {
+                      "unit": "px",
+                      "size": 14,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "7gr0opsg",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Featured work",
+                        "header_size": "h6",
+                        "css_classes": "lh-section-kicker"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "i4hevgh2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Selected visuals with campaign-grade finish.",
+                        "header_size": "h2",
+                        "css_classes": "lh-section-title"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "d8b4yg4t",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>A focused selection of recent campaign imagery, CGI and AI-generated visuals — spanning brand identity, product worlds and key visual systems.</p>",
+                    "css_classes": "lh-section-copy"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "q95ter9j",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"lh-work-grid\">\n  <article class=\"lh-work-card\" data-categories=\"ai branding\"><a href=\"/portfolio/\"><div class=\"lh-work-media\"><img src=\"/wp-content/uploads/stride-beyond.jpg\" alt=\"Stride Beyond\" loading=\"lazy\"></div><div class=\"lh-work-info\"><div class=\"lh-tag-row\"><span class=\"lh-tag\">AI Generated</span><span class=\"lh-tag\">Branding</span></div><h3 class=\"lh-work-title\">Stride Beyond</h3><p>AI-led identity exploration for a futuristic visual language.</p></div></a></article>\n  <article class=\"lh-work-card\" data-categories=\"branding\"><a href=\"/portfolio/\"><div class=\"lh-work-media\"><img src=\"/wp-content/uploads/nexora.jpg\" alt=\"Nexora\" loading=\"lazy\"></div><div class=\"lh-work-info\"><div class=\"lh-tag-row\"><span class=\"lh-tag\">Branding</span></div><h3 class=\"lh-work-title\">Nexora</h3><p>Brand system exploration with premium futuristic identity cues.</p></div></a></article>\n  <article class=\"lh-work-card\" data-categories=\"branding cgi\"><a href=\"/portfolio/\"><div class=\"lh-work-media\"><img src=\"/wp-content/uploads/bt-studio-beverage.jpg\" alt=\"BT Studio – CGI Beverage Demo\" loading=\"lazy\"></div><div class=\"lh-work-info\"><div class=\"lh-tag-row\"><span class=\"lh-tag\">Branding</span><span class=\"lh-tag\">CGI</span></div><h3 class=\"lh-work-title\">BT Studio – CGI Beverage Demo</h3><p>Product-led CGI beverage demo with polished advertising finish.</p></div></a></article>\n</div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0smqvqsd",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-section lh-section-muted",
+        "flex_direction": "column",
+        "content_width": "full"
+      },
+      "elements": [
+        {
+          "id": "q8hmmq4i",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "1r4mxmj0",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "css_classes": "lh-section-head",
+                "flex_direction": "row",
+                "flex_align_items": "flex-end",
+                "gap": {
+                  "unit": "px",
+                  "size": 32,
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "tmtbepi9",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "column",
+                    "gap": {
+                      "unit": "px",
+                      "size": 14,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "2fd0a5ug",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Services",
+                        "header_size": "h6",
+                        "css_classes": "lh-section-kicker"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "cd3ptp4k",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Built for visual campaigns.",
+                        "header_size": "h2",
+                        "css_classes": "lh-section-title"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "iupqw32i",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Focused on campaign-grade output for brands, agencies and production teams who need premium visual assets.</p>",
+                    "css_classes": "lh-section-copy"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "gzfqsb6u",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"lh-service-grid\">\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">01</span><div><h3 class=\"lh-service-title\">3D Product & CGI Visuals</h3><p class=\"lh-service-copy\">Premium product compositions, pack shots and campaign-ready CGI scenes.</p></div></article>\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">02</span><div><h3 class=\"lh-service-title\">AI Campaign Imagery</h3><p class=\"lh-service-copy\">AI-assisted visual exploration, concept boards and stylized brand imagery.</p></div></article>\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">03</span><div><h3 class=\"lh-service-title\">VFX & Post-production</h3><p class=\"lh-service-copy\">Compositing, retouching, enhancement and cinematic finishing for moving or still assets.</p></div></article>\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">04</span><div><h3 class=\"lh-service-title\">Visual Direction</h3><p class=\"lh-service-copy\">Campaign look development, key visual systems and production-ready visual storytelling.</p></div></article>\n</div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "irj2qanu",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-section",
+        "flex_direction": "column",
+        "content_width": "full"
+      },
+      "elements": [
+        {
+          "id": "nedqznf4",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "yehuuybb",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"lh-cta\"><p class=\"lh-section-kicker\">Available for Work</p><h2>Let’s build the next cinematic brand visual.</h2><p>Send over the brief, references and target deliverables. I can help shape the visual direction from concept to finished campaign asset.</p><div class=\"lh-hero-actions\"><a class=\"lh-button lh-button-primary\" href=\"mailto:hello@luonghuynh.com\">Get in Touch</a><a class=\"lh-button\" href=\"/portfolio/\">Explore Work</a></div></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "background_background": "classic",
+    "background_color": "#070707",
+    "hide_title": "yes"
+  }
+}

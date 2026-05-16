@@ -1,0 +1,238 @@
+{
+  "version": "0.4",
+  "title": "Luong Huynh — About",
+  "type": "page",
+  "content": [
+    {
+      "id": "riojc3by",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-section",
+        "flex_direction": "column",
+        "content_width": "full"
+      },
+      "elements": [
+        {
+          "id": "pwtl3c2u",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "m43vnk33",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "css_classes": "lh-about-grid",
+                "flex_direction": "row",
+                "flex_align_items": "flex-start",
+                "gap": {
+                  "unit": "px",
+                  "size": 86,
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "jqy04bzq",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "isInner": false,
+                  "settings": {
+                    "html": "<div class=\"lh-portrait-panel\"><img class=\"lh-portrait\" src=\"/wp-content/uploads/luong-huynh-portrait.jpg\" alt=\"Luong Huynh portrait\" loading=\"eager\"><div class=\"lh-hero-card-caption\"><div class=\"lh-meta-row\"><span class=\"lh-chip lh-chip-strong\">Digital Artist</span><span class=\"lh-chip\">Ho Chi Minh City</span></div></div></div>"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "wwbasxh8",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "isInner": false,
+                  "settings": {
+                    "html": "<div class=\"lh-rich-text\"><span class=\"lh-eyebrow\">About</span><h1>Digital Artist &amp; Visual Technologist.</h1><p>I’m a digital artist focused on 3D visuals, AI-generated images and VFX. I collaborate with brands, agencies and production teams to create campaign-ready visuals, cinematic key visuals and experimental AI-assisted imagery.</p><p>Based in Ho Chi Minh City, I work across the full visual pipeline — from concept and art direction through to production-finished assets ready for print, digital and broadcast.</p><ul class=\"lh-list\"><li><strong>Focus</strong><span>3D product visuals, AI-generated art, CGI key visuals, campaign image systems and VFX finishing.</span></li><li><strong>Clients</strong><span>Brands, agencies, production teams and campaign creators needing high-impact visuals.</span></li><li><strong>Approach</strong><span>Blend art direction, generative workflows, compositing and production sensibility into finished assets.</span></li><li><strong>Output</strong><span>Key visuals, product renders, pitch frames, social campaign assets, launch imagery and moving-image look development.</span></li></ul></div>"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4xaekwl",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-section lh-section-muted",
+        "flex_direction": "column",
+        "content_width": "full"
+      },
+      "elements": [
+        {
+          "id": "7nxfy2g9",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "r9wm2lx8",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "css_classes": "lh-section-head",
+                "flex_direction": "row",
+                "flex_align_items": "flex-end",
+                "gap": {
+                  "unit": "px",
+                  "size": 32,
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "e4gv8lwm",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "column",
+                    "gap": {
+                      "unit": "px",
+                      "size": 14,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "4dawehsx",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Services",
+                        "header_size": "h6",
+                        "css_classes": "lh-section-kicker"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4mu9we2r",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Creative services shaped around campaign delivery.",
+                        "header_size": "h2",
+                        "css_classes": "lh-section-title"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "wracp45s",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Each project is approached from concept through to production-ready delivery — visual-first, always.</p>",
+                    "css_classes": "lh-section-copy"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "kwz1a2e6",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"lh-service-grid\">\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">01</span><div><h3 class=\"lh-service-title\">3D Modeling & Scene Design</h3><p class=\"lh-service-copy\">Product-centric 3D scenes and stylized campaign worlds.</p></div></article>\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">02</span><div><h3 class=\"lh-service-title\">Generative Art Direction</h3><p class=\"lh-service-copy\">AI image workflows refined into premium, brand-safe visual directions.</p></div></article>\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">03</span><div><h3 class=\"lh-service-title\">VFX & Compositing</h3><p class=\"lh-service-copy\">Cinematic polish, retouching and post-production integration.</p></div></article>\n<article class=\"lh-service-card\"><span class=\"lh-service-number\">04</span><div><h3 class=\"lh-service-title\">Campaign Key Visuals</h3><p class=\"lh-service-copy\">Hero images, visual systems and adaptations for brand campaigns.</p></div></article>\n</div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cu76f7b8",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "css_classes": "lh-section-tight",
+        "flex_direction": "column",
+        "content_width": "full"
+      },
+      "elements": [
+        {
+          "id": "jn28s3p7",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "css_classes": "lh-container",
+            "flex_direction": "column",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": {}
+            },
+            "gap": {
+              "unit": "px",
+              "size": 0,
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "dr4of6xd",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"lh-cta\"><p class=\"lh-section-kicker\">Contact</p><h2>Available for selected visual campaigns.</h2><p>For project inquiries, include objective, timeline, references, deliverables and usage channel.</p><div class=\"lh-hero-actions\"><a class=\"lh-button lh-button-primary\" href=\"mailto:hello@luonghuynh.com\">hello@luonghuynh.com</a><a class=\"lh-button\" href=\"/portfolio/\">View Work</a></div></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "background_background": "classic",
+    "background_color": "#070707",
+    "hide_title": "yes"
+  }
+}
