@@ -104,7 +104,8 @@ h3 .elementor-heading-title {
 
 .lh-hero-title,
 .lh-hero-title h1,
-.lh-hero-title .elementor-heading-title {
+.lh-hero-title .elementor-heading-title,
+.lh-hero-tile.e-heading-base {
   max-width: 14ch;
   margin: 0;
   color: var(--lh-text);
@@ -128,16 +129,17 @@ h3 .elementor-heading-title {
 
 /* ── BUTTONS ──────────────────────────────────────────*/
 .lh-button,
-.lh-button .elementor-button {
+.lh-button .elementor-button,
+.lh-button.e-button-base{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   min-height: 48px;
   padding: 14px 22px;
-  border: 1px solid var(--lh-line-strong);
-  border-radius: var(--lh-pill);
-  background: transparent;
+  border: 1px solid var(--lh-line-strong)!important;
+  border-radius: var(--lh-pill)!important;
+  background: transparent!important;
   color: var(--lh-text) !important;
   font-family: var(--font-body);
   font-size: 13px;
@@ -152,21 +154,24 @@ h3 .elementor-heading-title {
 }
 
 .lh-button:hover,
-.lh-button .elementor-button:hover {
+.lh-button .elementor-button:hover,
+.lh-button.e-button-base:hover{
   transform: translateY(-2px);
   background: rgba(244, 240, 232, 0.08);
   border-color: var(--lh-text);
 }
 
 .lh-button-primary,
-.lh-button-primary .elementor-button {
-  background: var(--lh-accent);
-  border-color: var(--lh-accent);
+.lh-button-primary .elementor-button,
+.lh-button-primary.e-button-base{
+  background: var(--lh-accent)!important;
+  border-color: var(--lh-accent)!important;
   color: var(--lh-on-accent) !important;
 }
 
 .lh-button-primary:hover,
-.lh-button-primary .elementor-button:hover {
+.lh-button-primary .elementor-button:hover,
+.lh-button-primary.e-button-base:hover{
   background: var(--lh-text);
   border-color: var(--lh-text);
 }
@@ -389,10 +394,11 @@ h3 .elementor-heading-title {
 
 /* ── FOOTER CTA ───────────────────────────────────────*/
 .lh-footer-cta,
-.lh-cta {
-  padding: clamp(40px, 7vw, 120px);
-  border: 1px solid var(--lh-line);
-  border-radius: var(--lh-radius-lg);
+.lh-cta,
+.lh-cta.e-div-block-base {
+  padding: clamp(40px, 7vw, 120px)!important;
+  border: 1px solid var(--lh-line)!important;
+  border-radius: var(--lh-radius-lg)!important;
   background:
     linear-gradient(135deg, rgba(0, 240, 255, 0.08), transparent 40%),
     var(--lh-panel);
