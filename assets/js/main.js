@@ -16,6 +16,16 @@
     });
   }
 
+  const revealEls = document.querySelectorAll('.lh-reveal');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
   const filterButtons = document.querySelectorAll('[data-filter]');
   const cards = document.querySelectorAll('[data-categories]');
   filterButtons.forEach(button => {

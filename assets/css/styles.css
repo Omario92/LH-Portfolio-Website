@@ -20,7 +20,7 @@
 
 /* ── 2. DESIGN TOKENS ─────────────────────────────────
    All custom properties use the lh- prefix.
-   Copy this :root block into Elementor Custom CSS.      */
+   Source of truth: Design Files/colors_and_type.css    */
 :root {
   /* Base */
   --lh-bg:           #070707;
@@ -42,11 +42,32 @@
   --lh-accent-warm:  #6366f1;   /* electric indigo — gradient washes only */
   --lh-on-accent:    #070707;
 
+  /* Semantic aliases (match Design Files/colors_and_type.css) */
+  --fg-1:      var(--lh-text);
+  --fg-2:      var(--lh-muted);
+  --fg-accent: var(--lh-accent);
+  --fg-on-accent: var(--lh-on-accent);
+  --bg-1:      var(--lh-bg);
+  --bg-2:      var(--lh-bg-soft);
+  --bg-card:   var(--lh-panel);
+  --bg-card-2: var(--lh-panel-2);
+
   /* Radii */
   --lh-radius-sm:    12px;
   --lh-radius-md:    20px;
   --lh-radius-lg:    32px;
   --lh-pill:         999px;
+
+  /* Spacing scale */
+  --lh-space-1:  4px;
+  --lh-space-2:  8px;
+  --lh-space-3:  12px;
+  --lh-space-4:  16px;
+  --lh-space-5:  24px;
+  --lh-space-6:  32px;
+  --lh-space-7:  48px;
+  --lh-space-8:  72px;
+  --lh-space-9:  120px;
 
   /* Layout */
   --lh-max:          1440px;
@@ -64,6 +85,48 @@
   --font-display-alt: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
   --font-body:        "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono:        "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  /* Type scale tokens (from Design Files/colors_and_type.css) */
+  --type-hero-size:    clamp(64px, 14vw, 200px);
+  --type-hero-lh:      0.92;
+  --type-hero-track:   0.10em;
+  --type-hero-weight:  400;
+
+  --type-h1-size:    clamp(48px, 9vw, 140px);
+  --type-h1-lh:      0.94;
+  --type-h1-track:   0.12em;
+  --type-h1-weight:  400;
+
+  --type-h2-size:    clamp(32px, 4vw, 64px);
+  --type-h2-lh:      1;
+  --type-h2-track:   0.15em;
+  --type-h2-weight:  400;
+
+  --type-h3-size:    clamp(24px, 2.6vw, 44px);
+  --type-h3-lh:      1.02;
+  --type-h3-track:   0.11em;
+  --type-h3-weight:  400;
+
+  --type-lead-size:   clamp(18px, 2vw, 30px);
+  --type-lead-lh:     1.22;
+  --type-lead-track:  -0.03em;
+  --type-lead-weight: 400;
+
+  --type-body-size:   16px;
+  --type-body-lh:     1.55;
+  --type-body-track:  -0.005em;
+
+  --type-eyebrow-size:   clamp(11px, 0.85vw, 13px);
+  --type-eyebrow-track:  0.16em;
+  --type-eyebrow-weight: 700;
+
+  --type-meta-size:   12px;
+  --type-meta-track:  0.14em;
+  --type-meta-weight: 600;
+
+  --type-tag-size:   10px;
+  --type-tag-track:  0.12em;
+  --type-tag-weight: 700;
 }
 
 /* ── 3. RESET & BASE ──────────────────────────────────*/
@@ -245,7 +308,7 @@ button, input, textarea { font: inherit; }
 
 /* ── 6. HERO ──────────────────────────────────────────
    Bottom-left aligned. Massive Newake display type.
-   Radial gradient washes — no hard grid or overlay.    */
+   Radial gradient washes + subtle dot-grid overlay.   */
 .lh-hero {
   min-height: min(860px, 92vh);
   display: grid;
@@ -259,10 +322,22 @@ button, input, textarea { font: inherit; }
     var(--lh-bg);
 }
 
+/* Subtle dot-grid atmosphere — matches cinematic black-room aesthetic */
+.lh-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(244, 240, 232, 0.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%);
+}
+
 /* Legacy two-column wrapper — now single column */
 .lh-hero-grid { display: contents; }
 
-.lh-hero-body { max-width: 1100px; }
+.lh-hero-body { max-width: 1100px; position: relative; z-index: 1; }
 
 .lh-eyebrow {
   display: inline-flex;
@@ -270,9 +345,9 @@ button, input, textarea { font: inherit; }
   gap: 8px;
   color: var(--lh-accent);
   font-family: var(--font-body);
-  font-size: clamp(11px, 0.85vw, 13px);
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-track);
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: clamp(20px, 3vw, 28px);
@@ -281,10 +356,10 @@ button, input, textarea { font: inherit; }
 .lh-hero-title {
   margin: 0 0 clamp(20px, 3vw, 36px);
   font-family: var(--font-display);
-  font-size: clamp(64px, 14vw, 200px);
-  line-height: 0.92;
-  letter-spacing: 0.10em;
-  font-weight: 400;
+  font-size: var(--type-hero-size);
+  line-height: var(--type-hero-lh);
+  letter-spacing: var(--type-hero-track);
+  font-weight: var(--type-hero-weight);
   text-transform: uppercase;
   color: var(--lh-text);
   max-width: 14ch;
@@ -794,7 +869,162 @@ button, input, textarea { font: inherit; }
 
 .lh-socials a:hover { color: var(--lh-text); }
 
-/* ── 17. RESPONSIVE ───────────────────────────────────*/
+/* ── 17. SCROLL REVEAL ────────────────────────────────
+   Lightweight fade-up — activated by JS adding .is-visible.
+   Respects reduced motion via override below.             */
+@keyframes lh-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.lh-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--lh-dur-base) var(--lh-ease),
+    transform var(--lh-dur-base) var(--lh-ease);
+}
+
+.lh-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay utilities */
+.lh-reveal-d1 { transition-delay: 0.08s; }
+.lh-reveal-d2 { transition-delay: 0.16s; }
+.lh-reveal-d3 { transition-delay: 0.24s; }
+
+/* ── PROJECT DETAIL PAGE ──────────────────────────────*/
+.lh-detail-hero {
+  padding-block: clamp(72px, 10vw, 140px) clamp(40px, 5vw, 72px);
+}
+
+.lh-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--lh-space-5);
+  margin-bottom: var(--lh-space-6);
+}
+
+.lh-detail-title {
+  margin: 0 0 clamp(20px, 3vw, 36px);
+  font-family: var(--font-display);
+  font-size: clamp(48px, 9vw, 140px);
+  line-height: 0.94;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lh-detail-lead {
+  max-width: 680px;
+  color: rgba(244, 240, 232, 0.82);
+  font-size: var(--type-lead-size);
+  line-height: var(--type-lead-lh);
+  letter-spacing: var(--type-lead-track);
+}
+
+.lh-detail-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--lh-radius-lg);
+  background: var(--lh-panel);
+  margin-block: clamp(32px, 5vw, 72px);
+}
+
+.lh-detail-body {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 680px);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: start;
+}
+
+.lh-detail-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.lh-detail-info-row {
+  padding-block: var(--lh-space-5);
+  border-bottom: 1px solid var(--lh-line);
+}
+
+.lh-detail-info-label {
+  color: var(--lh-accent);
+  font-size: var(--type-meta-size);
+  font-weight: var(--type-meta-weight);
+  letter-spacing: var(--type-meta-track);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.lh-detail-info-value {
+  color: var(--lh-text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.lh-detail-content p {
+  color: rgba(244, 240, 232, 0.82);
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.7;
+  margin-bottom: 1.4em;
+}
+
+.lh-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+  margin-block: clamp(32px, 5vw, 64px);
+}
+
+.lh-detail-gallery-item {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--lh-radius-md);
+  background: var(--lh-panel);
+  width: 100%;
+}
+
+.lh-project-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--lh-line);
+  border-top: 1px solid var(--lh-line);
+  border-bottom: 1px solid var(--lh-line);
+  margin-block: clamp(48px, 7vw, 96px);
+}
+
+.lh-project-nav-item {
+  padding: clamp(24px, 4vw, 48px);
+  background: var(--lh-bg);
+  transition: background var(--lh-dur-fast) var(--lh-ease);
+}
+
+.lh-project-nav-item:hover { background: var(--lh-panel); }
+
+.lh-project-nav-label {
+  color: var(--lh-accent);
+  font-size: var(--type-meta-size);
+  font-weight: var(--type-meta-weight);
+  letter-spacing: var(--type-meta-track);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.lh-project-nav-title {
+  font-family: var(--font-display-alt);
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--lh-text);
+}
+
+/* ── 18. RESPONSIVE ───────────────────────────────────*/
 @media (max-width: 1024px) {
   .lh-section-head { grid-template-columns: 1fr; }
   .lh-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -871,9 +1101,13 @@ button, input, textarea { font: inherit; }
   .lh-footer-cta { padding: 32px; }
 
   .lh-list li { grid-template-columns: 1fr; gap: 4px; }
+  .lh-detail-body { grid-template-columns: 1fr; }
+  .lh-detail-sidebar { position: static; }
+  .lh-detail-gallery { grid-template-columns: 1fr; }
+  .lh-project-nav { grid-template-columns: 1fr; }
 }
 
-/* ── 18. REDUCED MOTION ───────────────────────────────*/
+/* ── 19. REDUCED MOTION ───────────────────────────────*/
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -881,4 +1115,5 @@ button, input, textarea { font: inherit; }
     scroll-behavior: auto !important;
     transition-duration: .01ms !important;
   }
+  .lh-reveal { opacity: 1; transform: none; }
 }
