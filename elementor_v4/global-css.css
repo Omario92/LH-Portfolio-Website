@@ -1,0 +1,445 @@
+/* =====================================================
+   LUONG HUYNH PORTFOLIO — ELEMENTOR GLOBAL CSS
+   Direction: Cinematic Digital Artist Portfolio
+   Usage: Elementor Pro > Site Settings > Custom CSS
+   All classes use the lh- prefix.
+   Add classes via: Advanced > CSS Classes (no leading dot)
+   ===================================================== */
+
+/* ── DESIGN TOKENS ────────────────────────────────────*/
+:root {
+  --lh-bg:           #070707;
+  --lh-bg-soft:      #101010;
+  --lh-panel:        #151515;
+  --lh-panel-2:      #1c1c1c;
+  --lh-text:         #f4f0e8;
+  --lh-muted:        #9b978f;
+  --lh-soft:         #6b6760;
+  --lh-line:         rgba(244, 240, 232, 0.14);
+  --lh-line-strong:  rgba(244, 240, 232, 0.28);
+  --lh-accent:       #00f0ff;
+  --lh-accent-warm:  #6366f1;
+  --lh-on-accent:    #070707;
+  --lh-radius-sm:    12px;
+  --lh-radius-md:    20px;
+  --lh-radius-lg:    32px;
+  --lh-pill:         999px;
+  --lh-max:          1440px;
+  --lh-gutter:       clamp(20px, 5vw, 72px);
+  --lh-section-y:    clamp(72px, 10vw, 160px);
+  --lh-ease:         cubic-bezier(.16, 1, .3, 1);
+  --font-display:     "Newake", "Inter Tight", "Bebas Neue", "Anton", ui-sans-serif, system-ui, sans-serif;
+  --font-display-alt: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-body:        "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:        "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+
+/* ── BASE ─────────────────────────────────────────────*/
+html, body {
+  background: var(--lh-bg);
+  color: var(--lh-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 .elementor-heading-title,
+h2 .elementor-heading-title,
+h3 .elementor-heading-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--lh-text);
+}
+
+::selection { background: var(--lh-accent); color: var(--lh-on-accent); }
+
+/* ── LAYOUT ───────────────────────────────────────────*/
+.lh-site,
+.lh-section,
+.lh-section-dark {
+  background: var(--lh-bg);
+  color: var(--lh-text);
+}
+
+.lh-section {
+  position: relative;
+  padding-block: var(--lh-section-y);
+  overflow: clip;
+}
+
+.lh-section-muted {
+  background:
+    radial-gradient(circle at top left, rgba(0, 240, 255, 0.05), transparent 34vw),
+    var(--lh-bg-soft);
+}
+
+.lh-container {
+  width: min(calc(100vw - (var(--lh-gutter) * 2)), var(--lh-max));
+  margin-inline: auto;
+}
+
+/* ── EYEBROW ──────────────────────────────────────────*/
+.lh-eyebrow,
+.lh-eyebrow .elementor-widget-container {
+  color: var(--lh-accent);
+  font-family: var(--font-body);
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── HERO ─────────────────────────────────────────────*/
+.lh-hero {
+  min-height: min(860px, 92vh);
+  display: grid;
+  align-items: end;
+  padding-block: clamp(96px, 12vw, 180px) clamp(56px, 7vw, 96px);
+  background:
+    radial-gradient(circle at 78% 28%, rgba(0, 240, 255, 0.10), transparent 24vw),
+    radial-gradient(circle at 20% 85%, rgba(99, 102, 241, 0.14), transparent 26vw),
+    var(--lh-bg);
+}
+
+.lh-hero-title,
+.lh-hero-title h1,
+.lh-hero-title .elementor-heading-title,
+.lh-hero-title.e-heading-base {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--lh-text)!important;
+  font-family: var(--font-display)!important;
+  text-transform: uppercase;
+  font-size: clamp(64px, 14vw, 200px)!important;
+  line-height: 0.92;
+  letter-spacing: 0.10em;
+  font-weight: 400;
+}
+
+.lh-hero-copy,
+.lh-hero-copy p,
+.lh-hero-copy .elementor-widget-container {
+  max-width: 680px;
+  color: rgba(244, 240, 232, 0.82);
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+}
+
+/* ── BUTTONS ──────────────────────────────────────────*/
+.lh-button,
+.lh-button .elementor-button,
+.lh-button.e-button-base{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 14px 22px;
+  border: 1px solid var(--lh-line-strong)!important;
+  border-radius: var(--lh-pill)!important;
+  background: transparent!important;
+  color: var(--lh-text) !important;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    transform 0.45s var(--lh-ease),
+    background 0.45s var(--lh-ease),
+    border-color 0.45s var(--lh-ease);
+}
+
+.lh-button:hover,
+.lh-button .elementor-button:hover,
+.lh-button.e-button-base:hover{
+  transform: translateY(-2px);
+  background: rgba(244, 240, 232, 0.08);
+  border-color: var(--lh-text);
+}
+
+.lh-button-primary,
+.lh-button-primary .elementor-button,
+.lh-button-primary.e-button-base{
+  background: var(--lh-accent)!important;
+  border-color: var(--lh-accent)!important;
+  color: var(--lh-on-accent) !important;
+}
+
+.lh-button-primary:hover,
+.lh-button-primary .elementor-button:hover,
+.lh-button-primary.e-button-base:hover{
+  background: var(--lh-text);
+  border-color: var(--lh-text);
+}
+
+.lh-button-secondary,
+.lh-button-secondary .elementor-button {
+  background: transparent;
+  border-color: var(--lh-line-strong);
+  color: var(--lh-text) !important;
+}
+
+.lh-button-secondary:hover,
+.lh-button-secondary .elementor-button:hover {
+  background: rgba(244, 240, 232, 0.08);
+  border-color: var(--lh-text);
+}
+
+/* ── SECTION HEAD ─────────────────────────────────────*/
+.lh-section-kicker,
+.lh-section-kicker .elementor-widget-container {
+  color: var(--lh-accent);
+  font-family: var(--font-body);
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lh-section-title,
+.lh-section-title .elementor-heading-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 80px);
+  line-height: 0.96;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+/* ── WORK GRID & CARDS ────────────────────────────────*/
+.lh-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 28px);
+}
+
+.lh-work-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lh-line);
+  border-radius: var(--lh-radius-lg);
+  background: var(--lh-panel);
+  transition:
+    transform 0.45s var(--lh-ease),
+    border-color 0.45s var(--lh-ease),
+    background 0.45s var(--lh-ease);
+}
+
+.lh-work-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--lh-line-strong);
+  background: var(--lh-panel-2);
+}
+
+.lh-work-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius:
+    calc(var(--lh-radius-lg) - 1px)
+    calc(var(--lh-radius-lg) - 1px)
+    var(--lh-radius-md)
+    var(--lh-radius-md);
+  background: #111;
+}
+
+.lh-work-media img,
+.lh-work-media video,
+.lh-work-media .elementor-widget-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.001);
+  transition: transform 0.9s var(--lh-ease), filter 0.9s var(--lh-ease);
+}
+
+.lh-work-card:hover .lh-work-media img,
+.lh-work-card:hover .lh-work-media video,
+.lh-work-card:hover .lh-work-media .elementor-widget-container img {
+  transform: scale(1.055);
+  filter: contrast(1.08) saturate(1.08);
+}
+
+/* Card title: Inter Tight — Newake demo is uppercase-only */
+.lh-work-info,
+.lh-work-body {
+  padding: clamp(16px, 2vw, 22px);
+}
+
+.lh-work-info h2,
+.lh-work-info h3,
+.lh-work-info .elementor-heading-title,
+.lh-work-title {
+  margin: 0 0 10px;
+  color: var(--lh-text);
+  font-family: var(--font-display-alt);
+  text-transform: none;
+  font-weight: 700;
+  font-size: clamp(18px, 1.8vw, 28px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+/* ── TAGS ─────────────────────────────────────────────*/
+.lh-tag-row,
+.lh-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.lh-tag,
+.lh-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 9px;
+  border: 1px solid var(--lh-line);
+  border-radius: var(--lh-pill);
+  color: rgba(244, 240, 232, 0.72);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.lh-chip-strong {
+  background: var(--lh-accent);
+  border-color: var(--lh-accent);
+  color: var(--lh-on-accent);
+}
+
+/* ── FILTER BAR ───────────────────────────────────────*/
+.lh-filter-row,
+.lh-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: clamp(28px, 4vw, 56px);
+}
+
+.lh-filter-pill,
+.lh-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 14px;
+  border: 1px solid var(--lh-line);
+  border-radius: var(--lh-pill);
+  color: var(--lh-muted);
+  background: transparent;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.25s var(--lh-ease), background 0.25s var(--lh-ease), border-color 0.25s var(--lh-ease);
+}
+
+.lh-filter-pill:hover,
+.lh-filter-btn:hover,
+.lh-filter-pill.is-active,
+.lh-filter-btn.is-active {
+  color: var(--lh-on-accent);
+  background: var(--lh-accent);
+  border-color: var(--lh-accent);
+}
+
+/* ── CAPABILITIES / SERVICE GRID ─────────────────────*/
+.lh-capabilities,
+.lh-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--lh-line);
+  border-radius: var(--lh-radius-lg);
+  overflow: hidden;
+  background: var(--lh-line);
+}
+
+.lh-capability-card,
+.lh-service-card {
+  min-height: 260px;
+  padding: clamp(20px, 2.6vw, 36px);
+  background: var(--lh-bg-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lh-capability-card h3,
+.lh-capability-card .elementor-heading-title,
+.lh-service-title {
+  color: var(--lh-text);
+  font-family: var(--font-display-alt);
+  text-transform: none;
+  font-weight: 700;
+  font-size: clamp(20px, 1.8vw, 28px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.lh-capability-card p,
+.lh-service-copy {
+  color: var(--lh-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ── FOOTER CTA ───────────────────────────────────────*/
+.lh-footer-cta,
+.lh-cta,
+.lh-cta.e-div-block-base {
+  padding: clamp(40px, 7vw, 120px)!important;
+  border: 1px solid var(--lh-line)!important;
+  border-radius: var(--lh-radius-lg)!important;
+  background:
+    linear-gradient(135deg, rgba(0, 240, 255, 0.08), transparent 40%),
+    var(--lh-panel);
+}
+
+.lh-footer-cta h2,
+.lh-footer-cta .elementor-heading-title,
+.lh-cta h2 {
+  max-width: 980px;
+  color: var(--lh-text);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 140px);
+  line-height: 0.94;
+  letter-spacing: 0.12em;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────*/
+@media (max-width: 1024px) {
+  .lh-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lh-capabilities, .lh-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  :root { --lh-gutter: 20px; --lh-section-y: 72px; }
+  .lh-hero { min-height: 80vh; padding-block: 96px 48px; }
+  .lh-hero-title, .lh-hero-title h1, .lh-hero-title .elementor-heading-title {
+    font-size: clamp(52px, 17vw, 86px);
+    letter-spacing: 0.04em;
+  }
+  .lh-work-grid, .lh-capabilities, .lh-service-grid { grid-template-columns: 1fr; }
+  .lh-work-media { aspect-ratio: 16 / 11; }
+  .lh-footer-cta, .lh-cta { padding: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
