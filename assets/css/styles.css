@@ -660,7 +660,16 @@ button, input, textarea { font: inherit; }
   background: var(--lh-bg-soft);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: clamp(16px, 2.2vw, 28px);
+}
+
+.lh-service-card > div,
+.lh-capability-card > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
 }
 
 .lh-service-number {
@@ -686,6 +695,7 @@ button, input, textarea { font: inherit; }
 .lh-service-copy,
 .lh-capability-card p {
   margin: 0;
+  margin-top: auto;
   color: var(--lh-muted);
   font-size: 14px;
   line-height: 1.55;

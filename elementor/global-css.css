@@ -370,7 +370,16 @@ h3 .elementor-heading-title {
   background: var(--lh-bg-soft);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: clamp(16px, 2.2vw, 28px);
+}
+
+.lh-service-card > div,
+.lh-capability-card > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
 }
 
 .lh-capability-card h3,
@@ -387,6 +396,8 @@ h3 .elementor-heading-title {
 
 .lh-capability-card p,
 .lh-service-copy {
+  margin: 0;
+  margin-top: auto;
   color: var(--lh-muted);
   font-size: 14px;
   line-height: 1.55;
