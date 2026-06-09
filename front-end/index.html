@@ -32,13 +32,18 @@
 <main>
   <section class="lh-hero">
     <div class="lh-container">
-      <div class="lh-hero-body">
-        <span class="lh-eyebrow lh-reveal">Ho Chi Minh City · 2026</span>
-        <h1 class="lh-hero-title lh-reveal lh-reveal-d1">Cinematic digital art</h1>
-        <p class="lh-hero-copy lh-reveal lh-reveal-d2">Digital Artist crafting 3D visuals, AI-generated imagery and VFX for brands, campaigns and cinematic stories.</p>
-        <div class="lh-hero-actions lh-reveal lh-reveal-d3">
-          <a class="lh-button lh-button-primary" href="portfolio.html">View Portfolio</a>
-          <a class="lh-button" href="about.html">About Luong</a>
+      <div class="lh-hero-grid">
+        <div class="lh-hero-body">
+          <span class="lh-eyebrow lh-reveal">Ho Chi Minh City · 2026</span>
+          <h1 class="lh-hero-title lh-reveal lh-reveal-d1">Cinematic<br>digital<br>art</h1>
+          <p class="lh-hero-copy lh-reveal lh-reveal-d2">Digital Artist crafting 3D visuals, AI-generated imagery and VFX for brands, campaigns and cinematic stories.</p>
+          <div class="lh-hero-actions lh-reveal lh-reveal-d3">
+            <a class="lh-button lh-button-primary" href="portfolio.html">View Portfolio</a>
+            <a class="lh-button" href="about.html">About Luong</a>
+          </div>
+        </div>
+        <div class="lh-hero-visual lh-reveal lh-reveal-d2">
+          <canvas id="lh-particle-canvas" data-image="assets/img/luong-huynh-halftone.jpg"></canvas>
         </div>
       </div>
     </div>
@@ -47,16 +52,16 @@
   <section class="lh-section">
     <div class="lh-container">
       <div class="lh-section-head">
-        <div>
+        <div class="lh-reveal">
           <p class="lh-section-kicker">Featured work</p>
           <h2 class="lh-section-title">Selected visuals with campaign-grade finish.</h2>
         </div>
-        <p class="lh-section-copy">A focused selection of recent campaign imagery, CGI and AI-generated visuals — spanning brand identity, product worlds and key visual systems.</p>
+        <p class="lh-section-copy lh-reveal lh-reveal-d1">A focused selection of recent campaign imagery, CGI and AI-generated visuals — spanning brand identity, product worlds and key visual systems.</p>
       </div>
       <div class="lh-work-grid">
 
-        <article class="lh-work-card" data-categories="ai branding">
-          <a href="portfolio.html" aria-label="View Stride Beyond">
+        <article class="lh-work-card lh-reveal" data-categories="ai branding">
+          <a href="stride-beyond.html" aria-label="View Stride Beyond">
             <div class="lh-work-media"><img src="assets/img/placeholders/stride-beyond.svg" alt="Stride Beyond visual placeholder"></div>
             <div class="lh-work-body">
               <div class="lh-meta-row"><span class="lh-tag">AI Generated</span><span class="lh-tag">Branding</span></div>
@@ -66,8 +71,8 @@
           </a>
         </article>
 
-        <article class="lh-work-card" data-categories="branding">
-          <a href="portfolio.html" aria-label="View Nexora">
+        <article class="lh-work-card lh-reveal lh-reveal-d1" data-categories="branding">
+          <a href="nexora.html" aria-label="View Nexora">
             <div class="lh-work-media"><img src="assets/img/placeholders/nexora.svg" alt="Nexora visual placeholder"></div>
             <div class="lh-work-body">
               <div class="lh-meta-row"><span class="lh-tag">Branding</span></div>
@@ -77,8 +82,8 @@
           </a>
         </article>
 
-        <article class="lh-work-card" data-categories="branding cgi">
-          <a href="portfolio.html" aria-label="View BT Studio – CGI Beverage Demo">
+        <article class="lh-work-card lh-reveal lh-reveal-d2" data-categories="branding cgi">
+          <a href="bt-studio-cgi-beverage-demo.html" aria-label="View BT Studio – CGI Beverage Demo">
             <div class="lh-work-media"><img src="assets/img/placeholders/bt-studio-cgi-beverage-demo.svg" alt="BT Studio – CGI Beverage Demo visual placeholder"></div>
             <div class="lh-work-body">
               <div class="lh-meta-row"><span class="lh-tag">Branding</span><span class="lh-tag">CGI</span></div>
@@ -89,41 +94,44 @@
         </article>
 
       </div>
+      <div class="lh-section-actions lh-reveal">
+        <a class="lh-button" href="portfolio.html?filter=feature">Recent Works</a>
+      </div>
     </div>
   </section>
 
   <section class="lh-section lh-section-muted">
     <div class="lh-container">
       <div class="lh-section-head">
-        <div>
+        <div class="lh-reveal">
           <p class="lh-section-kicker">Services</p>
           <h2 class="lh-section-title">Built for visual campaigns.</h2>
         </div>
-        <p class="lh-section-copy">Focused on campaign-grade output for brands, agencies and production teams who need premium visual assets.</p>
+        <p class="lh-section-copy lh-reveal lh-reveal-d1">Focused on campaign-grade output for brands, agencies and production teams who need premium visual assets.</p>
       </div>
       <div class="lh-service-grid">
-        <article class="lh-service-card">
+        <article class="lh-service-card lh-reveal">
           <span class="lh-service-number">01</span>
           <div>
             <h3 class="lh-service-title">3D Product &amp; CGI Visuals</h3>
             <p class="lh-service-copy">Premium product compositions, pack shots and campaign-ready CGI scenes.</p>
           </div>
         </article>
-        <article class="lh-service-card">
+        <article class="lh-service-card lh-reveal lh-reveal-d1">
           <span class="lh-service-number">02</span>
           <div>
             <h3 class="lh-service-title">AI Campaign Imagery</h3>
             <p class="lh-service-copy">AI-assisted visual exploration, concept boards and stylized brand imagery.</p>
           </div>
         </article>
-        <article class="lh-service-card">
+        <article class="lh-service-card lh-reveal lh-reveal-d2">
           <span class="lh-service-number">03</span>
           <div>
             <h3 class="lh-service-title">VFX &amp; Post-production</h3>
             <p class="lh-service-copy">Compositing, retouching, enhancement and cinematic finishing for moving or still assets.</p>
           </div>
         </article>
-        <article class="lh-service-card">
+        <article class="lh-service-card lh-reveal lh-reveal-d3">
           <span class="lh-service-number">04</span>
           <div>
             <h3 class="lh-service-title">Visual Direction</h3>
@@ -137,10 +145,10 @@
   <section class="lh-section" id="contact">
     <div class="lh-container">
       <div class="lh-cta">
-        <p class="lh-section-kicker">Available for Work</p>
-        <h2>Let's build the next cinematic brand visual.</h2>
-        <p>Send over the brief, references and target deliverables. I can help shape the visual direction from concept to finished campaign asset.</p>
-        <div class="lh-hero-actions">
+        <p class="lh-section-kicker lh-reveal">Available for Work</p>
+        <h2 class="lh-reveal lh-reveal-d1">Let's build the next cinematic brand visual.</h2>
+        <p class="lh-reveal lh-reveal-d2">Send over the brief, references and target deliverables. I can help shape the visual direction from concept to finished campaign asset.</p>
+        <div class="lh-hero-actions lh-reveal lh-reveal-d3">
           <a class="lh-button lh-button-primary" href="mailto:hello@luonghuynh.com">Get in Touch</a>
           <a class="lh-button" href="portfolio.html">Explore Work</a>
         </div>

@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static portfolio prototype for Luong Huynh, prepared for Claude Code review and Elementor rebuild.",
   "scripts": {
-    "preview": "python -m http.server 5173",
+    "preview": "python -m http.server 5173 -d front-end",
     "check:paths": "python scripts/check_paths.py"
   }
 }

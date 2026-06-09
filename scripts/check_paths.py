@@ -2,14 +2,18 @@ from pathlib import Path
 import re, sys
 
 root = Path(__file__).resolve().parents[1]
+frontend_dir = root / "front-end"
 missing = []
-for html_file in root.glob("*.html"):
+for html_file in frontend_dir.glob("*.html"):
     text = html_file.read_text(encoding="utf-8")
     refs = re.findall(r"(?:href|src)=['\"]([^'\"]+)['\"]", text)
     for ref in refs:
         if ref.startswith(("http://", "https://", "mailto:", "#")):
             continue
-        path = root / ref
+        clean_ref = ref.split("?")[0].split("#")[0]
+        if not clean_ref:
+            continue
+        path = frontend_dir / clean_ref
         if not path.exists():
             missing.append((html_file.name, ref))
 

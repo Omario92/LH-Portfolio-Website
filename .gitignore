@@ -1,0 +1,12 @@
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Claude CLI Cache / Settings
+.claude/worktrees/
+.claude/hooks/
+.claude/settings.json
+
+# System Files
+.DS_Store
+Thumbs.db
